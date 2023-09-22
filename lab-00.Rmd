@@ -17,15 +17,15 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Cameron", "Matt", "Ade", 
+           "Murray"),
+  github_username = c("ca3eron", "s2487351", "ade8724", 
+                      "MurrayBone"), 
+  colour = c("Blue", "Blue", "Orange", 
+             "Light Blue"),
+  hobby = c("Photography", "Chess", "Basketball", 
+            "Rowing"),
+  favourite_number = c(4, 7, 5, 2)
   )
 
 team_data
@@ -46,21 +46,21 @@ p1 <- ggplot(data = team_data,
 p1
 ```
 
+Blue and its variants seem to be the most popular colours amongst my team, but no obvious correlation between favourite colour and number. 
 
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+ 
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "Github Username", 
+          y = "Favourite Number",
+          title = "My team's favourite numbers, ordered by Github username")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
-
+Still, blue and similar tones dominate my team's preferences, but their favourite colours fail to predicate their favorite numbers. 
 ### Exercise 20
 
 ```{r new-bar-plot}
@@ -69,4 +69,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+Because hobbies can be very diverse, there tend to be a wide variety of hobbies within any group of people and, as such, a bar chart will largrly depict several bars of rougly equal height and thus fails to convey meaningful information. The best way to convey this data might just be to list all the responses from the set. 
